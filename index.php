@@ -1,6 +1,6 @@
 <?php
 // Required if your environment does not handle autoloading
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/test2/vendor/autoload.php';
 
 // Use the REST API Client to make requests to the Twilio REST API
 use Twilio\Rest\Client;

@@ -1,23 +1,120 @@
-<?php
-// Required if your environment does not handle autoloading
-require __DIR__ . '/test2/vendor/autoload.php';
+<!DOCTYPE html>
+<!--
+Copyright 2015 Google Inc. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-// Use the REST API Client to make requests to the Twilio REST API
-use Twilio\Rest\Client;
+<html>
+  <head>
+    <title>Web App Install Banner: Related Apps (Android currently) Sample</title>
+    <meta name="apple-itunes-app" content="app-id=554244680, app-argument=https://itunes.apple.com/us/app/10dollar-mobile/id1128928373?ls=1&mt=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://googlechrome.github.io/samples/styles/main.css">
+    <link rel="manifest" href="manifest.json">
+      <script> 
+    window.addEventListener('load', function() {
+      var outputElement = document.getElementById('output');
+      navigator.serviceWorker.register('service-worker.js', { scope: './' })
+        .then(function(r) {
+          console.log('registered service worker');
+        })
+        .catch(function(whut) {
+          console.error('uh oh... ');
+          console.error(whut);
+        });
+       
+      window.addEventListener('beforeinstallprompt', function(e) {
+        outputElement.textContent = 'beforeinstallprompt Event fired';
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Web App Install Banner: Related Apps (Android currently) Sample</h1>
 
-// Your Account SID and Auth Token from twilio.com/console
-$sid = 'ACacca4b2e78d54ba822a203d71997026e';
-$token = '4fe81c58e820787eebd3e83ddac11c4a';
-$client = new Client($sid, $token);
+    <p>Available in <a href="https://www.chromestatus.com/features/4540065577435136">Chrome 44+ (for Android)</a></p>
 
-// Use the client to do fun stuff like send text messages!
-$client->messages->create(
-    // the number you'd like to send the message to
-    '+15197216363',
-    array(
-        // A Twilio phone number you purchased at twilio.com/console
-        'from' => '+12268940255',
-        // the body of the text message you'd like to send
-        'body' => 'Hey Jenny! Good luck on the bar exam!'
-    )
-);
+    <p>The <a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">related (Native) app install banner</a> will prompt the user to add your web app to the users device.
+    It will only prompt when a number of criteria have been met:
+    </p>
+
+    <ul>
+      <li>The site is using HTTPS</li>
+      <li>The site has a manifest declared</li>
+      <li>The manifest has a <code>short_name</code>, 144 pixel icon and a type of 'image/png'</li>
+      <li>The manifest has a <code>related_applications</code> section with an object that has the 'type': 'play' and a Google Play Store package ID.</li>
+    </ul>
+
+    <p>To see if this example works, come back in another day and you will see the banner.</p>
+    <p>For testing we encourage you to force the banner to appear by setting the chrome://flags/#bypass-app-banner-engagement-checks flag.</p>
+    <h1>Web App Install Banner: Related Apps (Android currently) Sample</h1>
+
+    <p>Available in <a href="https://www.chromestatus.com/features/4540065577435136">Chrome 44+ (for Android)</a></p>
+
+    <p>The <a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">related (Native) app install banner</a> will prompt the user to add your web app to the users device.
+    It will only prompt when a number of criteria have been met:
+    </p>
+
+    <ul>
+      <li>The site is using HTTPS</li>
+      <li>The site has a manifest declared</li>
+      <li>The manifest has a <code>short_name</code>, 144 pixel icon and a type of 'image/png'</li>
+      <li>The manifest has a <code>related_applications</code> section with an object that has the 'type': 'play' and a Google Play Store package ID.</li>
+    </ul>
+
+    <p>To see if this example works, come back in another day and you will see the banner.</p>
+    <p>For testing we encourage you to force the banner to appear by setting the chrome://flags/#bypass-app-banner-engagement-checks flag.</p>
+      <h1>Web App Install Banner: Related Apps (Android currently) Sample</h1>
+
+    <p>Available in <a href="https://www.chromestatus.com/features/4540065577435136">Chrome 44+ (for Android)</a></p>
+
+    <p>The <a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">related (Native) app install banner</a> will prompt the user to add your web app to the users device.
+    It will only prompt when a number of criteria have been met:
+    </p>
+
+    <ul>
+      <li>The site is using HTTPS</li>
+      <li>The site has a manifest declared</li>
+      <li>The manifest has a <code>short_name</code>, 144 pixel icon and a type of 'image/png'</li>
+      <li>The manifest has a <code>related_applications</code> section with an object that has the 'type': 'play' and a Google Play Store package ID.</li>
+    </ul>
+
+    <p>To see if this example works, come back in another day and you will see the banner.</p>
+    <p>For testing we encourage you to force the banner to appear by setting the chrome://flags/#bypass-app-banner-engagement-checks flag.</p>
+      <h1>Web App Install Banner: Related Apps (Android currently) Sample</h1>
+
+    <p>Available in <a href="https://www.chromestatus.com/features/4540065577435136">Chrome 44+ (for Android)</a></p>
+
+    <p>The <a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">related (Native) app install banner</a> will prompt the user to add your web app to the users device.
+    It will only prompt when a number of criteria have been met:
+    </p>
+
+    <ul>
+      <li>The site is using HTTPS</li>
+      <li>The site has a manifest declared</li>
+      <li>The manifest has a <code>short_name</code>, 144 pixel icon and a type of 'image/png'</li>
+      <li>The manifest has a <code>related_applications</code> section with an object that has the 'type': 'play' and a Google Play Store package ID.</li>
+    </ul>
+
+    <p>To see if this example works, come back in another day and you will see the banner.</p>
+    <p>For testing we encourage you to force the banner to appear by setting the chrome://flags/#bypass-app-banner-engagement-checks flag.</p>
+      <script> 
+      window.addEventListener('load', function() {
+  
+        var outputElement = document.getElementById('output');
+               
+        window.addEventListener('beforeinstallprompt', function(e) {
+          outputElement.textContent = 'beforeinstallprompt Event fired';
+        });
+      });
+    </script>
+  </body>
+</head>

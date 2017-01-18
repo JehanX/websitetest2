@@ -17,25 +17,8 @@ limitations under the License.
     <title>Web App Install Banner: Related Apps (Android currently) Sample</title>
     <meta name="apple-itunes-app" content="app-id=554244680, app-argument=https://itunes.apple.com/us/app/10dollar-mobile/id1128928373?ls=1&mt=8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://googlechrome.github.io/samples/styles/main.css">
+
     <link rel="manifest" href="manifest.json">
-      <script> 
-    window.addEventListener('load', function() {
-      var outputElement = document.getElementById('output');
-      navigator.serviceWorker.register('service-worker.js', { scope: './' })
-        .then(function(r) {
-          console.log('registered service worker');
-        })
-        .catch(function(whut) {
-          console.error('uh oh... ');
-          console.error(whut);
-        });
-       
-      window.addEventListener('beforeinstallprompt', function(e) {
-        outputElement.textContent = 'beforeinstallprompt Event fired';
-      });
-    });
-    </script>
   </head>
   <body>
     <h1>Web App Install Banner: Related Apps (Android currently) Sample</h1>
